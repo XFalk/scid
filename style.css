@@ -1,0 +1,302 @@
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 130px;
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+.header__logo {
+    width: 100%;
+}
+
+.header__logo-img {
+    margin: 20px 0px 8px 40px;
+}
+
+.header__banner {
+    width: 100%;
+    height: 39px;
+    background-image: url(img/header__banner.png);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px 15px;
+    grid-template-areas: "main__banner main__banner main__banner main__quotes" "main__news main__information-disclosure main__purchase-sales main_block3";
+}
+
+.main * {
+    box-sizing: border-box;
+}
+
+.main>* {
+    background-color: #C4C4C4;
+}
+
+.main h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.main__banner {
+    grid-area: main__banner;
+    display: flex;
+    height: 319px;
+}
+
+.main__banner-for-img {
+    background-color: rgb(253, 255, 140);
+    width: 511px;
+    height: 319px;
+}
+
+.main__banner-after-img {
+    background-color: #0078DC;
+    height: 319px;
+    width: 100%;
+}
+
+.main__banner-img {
+    opacity: 0.51;
+    height: 319px;
+    width: 511px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.main__quotes {
+    grid-area: main__quotes;
+    text-align: center;
+    height: 319px;
+}
+
+.main__quotes h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 319px;
+}
+
+.main__news {
+    grid-area: main__news;
+    height: 516px;
+    min-width: 375px;
+    padding: 69px 0 0 76px;
+}
+
+.main__information-disclosure {
+    grid-area: main__information-disclosure;
+    height: 516px;
+    padding: 52px 58px 0 13px;
+}
+
+.main__information-disclosure-img {
+    position: absolute;
+    opacity: 0;
+}
+
+.main__information-disclosure-text {
+    position: absolute;
+    opacity: 0;
+}
+
+.main__purchase-sales {
+    grid-area: main__purchase-sales;
+    height: 516px;
+    padding-top: 58px;
+    text-align: center;
+}
+
+.main_block3 {
+    grid-area: main_block3;
+    height: 516px;
+    padding-top: 75px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 60px;
+    width: 100%;
+    height: 330px;
+    background-image: url(img/header__banner.png);
+    margin-bottom: 41px;
+}
+
+@media (max-width: 960px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        height: 100px;
+    }
+    .header__logo-img {
+        margin: 20px 0px 0px 20px;
+    }
+    .header__logo {
+        width: auto;
+    }
+    .header__banner {
+        width: 42px;
+        height: 42px;
+        margin-top: 29px;
+        margin-right: 20px;
+    }
+    .main {
+        padding: 0 20px 0 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 2px;
+        grid-template-areas: "main__banner main__quotes" "main__news main__news" "main__information-disclosure main__information-disclosure" "main__purchase-sales main__purchase-sales" "main_block3 main_block3";
+    }
+    .main__banner {
+        height: 320px;
+    }
+    .main__banner-for-img {
+        background-color: rgba(253, 255, 140, 0.49);
+        width: 546px;
+        height: 320px;
+    }
+    .main__banner-img {
+        opacity: 0;
+        height: 320px;
+        width: 546px;
+    }
+    .main__banner-after-img {
+        height: 320px;
+        width: 0;
+    }
+    .main__quotes {
+        padding: 42px 0 0 36px;
+        text-align: start;
+    }
+    .main__quotes h2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .main__news {
+        height: 309px;
+        padding: 41px 0 0 148px;
+    }
+    .main__information-disclosure {
+        padding: 0;
+        background-color: #EFEFEF;
+        height: 182px;
+    }
+    .main__information-disclosure h2 {
+        margin-top: 17px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #0078DC;
+    }
+    .main__information-disclosure-img {
+        position: static;
+        opacity: 1;
+        float: left;
+        margin: 1px 29px 0 2px;
+    }
+    .main__information-disclosure-text {
+        position: static;
+        opacity: 1;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 5px;
+    }
+    .main__purchase-sales {
+        height: 182px;
+        padding-top: 17px;
+    }
+    
+    .main_block3 {
+        height: 182px;
+        padding-top: 17px;
+    }
+}
+@media (max-width: 768px) {
+    .header__logo-img {
+        margin: 10px 0px 0px 10px;
+        width: 70px;
+        height: 42px;
+    }
+    .header {
+        height: 64px;
+    }
+    .header__banner {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .main {
+        margin: 0;
+        padding: 0;
+        gap: 25px 0;
+        grid-template-areas: "main__banner"
+         "main__quotes"
+          "main__news" 
+           "main__purchase-sales" 
+           "main_block3"
+           "main__information-disclosure";
+    }
+    .main__banner {
+        height: 258px;
+        width: 95VW;
+    }
+    .main__banner-for-img {
+        background-color: rgba(253, 255, 140, 1);
+        height:258px;
+        max-width: 414px;
+    }
+    .main__banner-img {
+        opacity: 0.51;
+        height: 258px;
+        max-width: 414px;
+         object-fit: cover;
+         object-position: 0 0;
+           }
+    .main__banner-after-img {
+        height: 258px;
+        width: 100%;
+    }
+    .main__quotes {
+        padding: 0;
+        text-align: start;
+        margin: 0 10px 0 10px;
+        height: 319px;
+        width: 100%;
+    }
+    .main__quotes h2{
+        margin: 131px 167px 0 97px;
+        font-size: 18px;
+line-height: 21px;
+    }
+    .main__news {
+        width: 100%;
+        margin: 0 10px 0 10px;
+        height: 516px;
+        padding: 69px 0 0 80px;
+    }
+    .main__purchase-sales {
+        text-align: start;
+        height: auto;
+        padding: 11px 0 10px 22px;
+            }
+    
+    .main_block3 {
+        text-align: start;
+        height: auto;
+        padding: 11px 0 10px 22px;
+            }
+            .main__information-disclosure{
+                padding-left: 22px;
+            }
+            .main__information-disclosure-img {
+                position: absolute;
+                opacity: 0;
+            }
+
+}
